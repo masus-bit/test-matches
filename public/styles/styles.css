@@ -1,0 +1,127 @@
+body {
+  margin: 0, auto;
+  display: flex;
+  justify-content: center;
+  background-color: #E5E5E5;
+}
+.board {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f7fb;
+  overflow: hidden;
+}
+.tabs-wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 47px;
+  font-family: "Lato", sans-serif;
+  background-color: white;
+  border-bottom: 0.3px solid #ececee;
+  margin-top: 20px;
+  justify-content: space-around;
+}
+.league-wrap{
+    margin-top: 20px;
+    background-color: white;
+    width: 100%;
+}
+.tabs-item {
+    width:91px;
+  display: flex;
+  margin: 10px;
+  cursor: pointer;
+  height: 47px;
+justify-content: center;
+align-items: center;
+  margin-bottom:0;
+  margin-top: 0;
+}
+.tabs-item__title {
+    color: #1e99c7;
+  transition: 0.3s;
+  font-weight: bolder;
+  font-size: 12px;
+}
+.tabs-item__title:hover {
+  color: black;
+}
+.active-tab{
+    border-bottom:3px solid #1E99C7;
+    color:rgba(45, 40, 94, 0.56) ;
+    
+}
+.calendar{
+    margin-right: 10px;
+}
+.active-tab p{
+    color: black;
+}
+.capacity {
+  margin-left: 5px;
+  color: #353942;
+  opacity: 0.5;
+  font-size: 12px;
+}
+.country-flag {
+  width: 26px;
+  height: 16px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+.league {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 30px;
+
+}
+.title-section {
+  display: flex;
+  height: 43px;
+  width: 100%;
+  font-size: 16px;
+  align-items: center;
+
+  font-family: "Lato", sans-serif;
+  border-bottom: rgba(53, 57, 66, 0.25) 1px solid;
+}
+.match-item {
+    list-style: none;
+    margin-left: -40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.match-left {
+  display: flex;
+  align-items: center;
+  margin-top: -5px;
+}
+.match-time {
+  display: flex;
+  align-items: center;
+  margin: 5px 10px;
+  padding-right: 10px;
+  height: 30px;
+  font-family: "Lato", sans-serif;
+  color: rgba(53, 57, 66, 0.5);
+  font-size: 16px;
+  border-right: rgba(53, 57, 66, 0.25) 2px solid;
+}
+.match-name {
+  color: #1e99c7;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.score{
+    margin-left: 10px;
+}
+.status,
+.adv{
+    display: none;
+}
+
