@@ -3,6 +3,7 @@ import { Match } from "../match/match.jsx";
 
 export const League = (props) => {
   const { league, matches } = props;
+  
   return league.items.map((it, i) => {
     return (
       <div className="league" key={i}>
