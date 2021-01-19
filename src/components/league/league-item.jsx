@@ -10,14 +10,49 @@ export const LeagueItem = (props) => {
         !activeLeague ? setLeague(true) : setLeague(false);
       }}
     >
-      {league.league}
-      
+      <div className="triangle-wrap">
+        {league.league}
+        {!activeLeague ? (
+          <svg
+            className="triangle"
+            width="9"
+            height="5"
+            viewBox="0 0 9 5"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4.5 5L0 0L9 0L4.5 5Z"
+              fill="white"
+            />
+          </svg>
+        ) : (
+          <svg
+            className="triangle"
+            width="9"
+            height="5"
+            viewBox="0 0 9 5"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4.5 0L9 5H0L4.5 0Z"
+              fill="white"
+            />
+          </svg>
+        )}
+      </div>
       <ul className={`leagues-list ${activeLeague ? "visible" : null}`}>
         {league.items.map((item) => {
           return (
             <li className="leagues-item">
               {item.item}{" "}
               <svg
+                className="close-cross"
                 width="10"
                 height="10"
                 viewBox="0 0 10 10"

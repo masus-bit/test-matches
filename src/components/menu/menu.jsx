@@ -5,9 +5,8 @@ export const Menu = (props) => {
   return (
     <div className={`menu ${menuActive ? "menu-visible" : null}`}>
       <div className="menu-header">
-
         <h4 className="menu-title">Меню</h4>
-        <h4 className="matches">Расписание матчей</h4>
+        <h4 className="matches-time">Расписание матчей</h4>
         <svg
           onClick={() => setMenu(false)}
           className="cross"

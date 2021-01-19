@@ -8,7 +8,7 @@ const Leagues = (props) => {
       <h4 className="leagues-title">Мои лиги</h4>
       <ul className="leagues-country-list">
         {league.map((it, i) => {
-          return <LeagueItem league={it} />
+          return <LeagueItem league={it} />;
         })}
       </ul>
     </aside>

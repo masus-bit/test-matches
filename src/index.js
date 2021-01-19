@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
 import React from "react";
-import { reducer} from "./reducers/reducer.js";
-import {ActionCreator, Operations} from './reducers/operations.js'
+import { reducer } from "./reducers/reducer.js";
+import { ActionCreator, Operations } from "./reducers/operations.js";
 import { Provider } from "react-redux";
 import { App } from "../src/components/app/app.jsx";
 import { createStore, applyMiddleware } from "redux";
@@ -13,22 +13,24 @@ const api = createApi((...args) => store.dispatch(...args));
 export const store = createStore(
     reducer,
     compose(
-      applyMiddleware(thunk.withExtraArgument(api)),
-      window.__REDUX_DEVTOOLS_EXTENSION__
-        ? window.__REDUX_DEVTOOLS_EXTENSION__()
-        : (f) => f
+        applyMiddleware(thunk.withExtraArgument(api)),
+        window.__REDUX_DEVTOOLS_EXTENSION__ ?
+        window.__REDUX_DEVTOOLS_EXTENSION__() :
+        (f) => f
     )
-  );
+);
 
-store.dispatch(Operations.init())
+store.dispatch(Operations.init());
 const init = () => {
-  ReactDOM.render(
-      <Provider store={store}>
-      <App />
-      </Provider>,
+    ReactDOM.render( <
+        Provider store = { store } >
+        <
+        App / >
+        <
+        /Provider>,
 
-    document.querySelector(`#root`)
-  );
+        document.querySelector(`#root`)
+    );
 };
 
 init();

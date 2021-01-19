@@ -15,26 +15,26 @@ const Main = React.memo((props) => {
     <Fragment>
       <Header />
       <div className="board-wrapper">
-      <div className="aside-wrapper">
-      <Leagues league={league}  />
-      <Countries country={country} />
-      </div>
-      <div className="board">
-        <Tabs setActive={setActive} />
-        {league.map((it, i) => {
-          return (
-            <div className="league-wrap" key={i}>
-              <League
-                league={it}
-                matches={
-                  activeTab == "all" ? matches : dataByDay(matches, activeTab)
-                }
-                key={i}
-              />
-            </div>
-          );
-        })}
-      </div>
+        <div className="aside-wrapper">
+          <Leagues league={league} />
+          <Countries country={country} />
+        </div>
+        <div className="board">
+          <Tabs setActive={setActive} />
+          {league.map((it, i) => {
+            return (
+              <div className="league-wrap" key={i}>
+                <League
+                  league={it}
+                  matches={
+                    activeTab == "all" ? matches : dataByDay(matches, activeTab)
+                  }
+                  key={i}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </Fragment>
   );
@@ -42,7 +42,7 @@ const Main = React.memo((props) => {
 const mapStateToProps = (state) => {
   return {
     league: state.league,
-    country:state.country,
+    country: state.country,
     matches: state.matches,
   };
 };

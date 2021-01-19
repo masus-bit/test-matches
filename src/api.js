@@ -1,29 +1,27 @@
-  
 import axios from "axios";
 const TIMEOUT = 5000;
 
 const createApi = (dispatch) => {
-  const api = axios.create({
-    baseURL: `http://u0362146.plsk.regruhosting.ru`,
-    timeout: TIMEOUT,
-    withCredentials: false,
-  });
+    const api = axios.create({
+        baseURL: `http://u0362146.plsk.regruhosting.ru`,
+        timeout: TIMEOUT,
+        withCredentials: false,
+    });
 
-  const onSuccess = (response) => {
-    console.log();
- 
-      return response;
-  
-  };
+    const onSuccess = (response) => {
+        console.log();
 
-  const onFail = (err) => {
-    alert("Произошла ошибка http");
-    return err;
-  };
+        return response;
+    };
 
-  api.interceptors.response.use(onSuccess, onFail);
+    const onFail = (err) => {
+        alert("Произошла ошибка http");
+        return err;
+    };
 
-  return api;
+    api.interceptors.response.use(onSuccess, onFail);
+
+    return api;
 };
 
 export default createApi;
